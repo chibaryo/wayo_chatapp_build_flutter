@@ -14,7 +14,6 @@
     This is a placeholder for base href that will be replaced by the value of
     the `--base-href` argument provided to `flutter build`.
   -->
-  <base href="/wayo_chatapp_flutter/">
 
   <meta charset="UTF-8">
   <meta content="IE=Edge" http-equiv="X-UA-Compatible">
@@ -58,7 +57,7 @@
   <script>
     if ("serviceWorker" in navigator) {
       window.addEventListener("load", function () {
-        navigator.serviceWorker.register("/wayo_chatapp_build_flutter/firebase-messaging-sw.js");
+        navigator.serviceWorker.register("firebase-messaging-sw.js", { scope: "/wayo_chatapp_build_flutter/" });
       });
     }
   </script>  
