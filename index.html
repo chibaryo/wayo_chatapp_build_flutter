@@ -37,6 +37,13 @@
   </script>
   <!-- This script adds the flutter initialization JS code -->
   <script src="flutter.js" defer></script>
+  <script>
+    if ("serviceWorker" in navigator) {
+      window.addEventListener("load", function () {
+        navigator.serviceWorker.register("firebase-messaging-sw.js", { scope: "/wayo_chatapp_build_flutter/" });
+      });
+    }
+  </script>  
 </head>
 <body>
   <script>
@@ -54,12 +61,5 @@
       });
     });
   </script>
-  <script>
-    if ("serviceWorker" in navigator) {
-      window.addEventListener("load", function () {
-        navigator.serviceWorker.register("firebase-messaging-sw.js", { scope: "/wayo_chatapp_build_flutter/" });
-      });
-    }
-  </script>  
 </body>
 </html>
